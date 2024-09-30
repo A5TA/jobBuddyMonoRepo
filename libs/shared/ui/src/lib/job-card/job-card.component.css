@@ -1,0 +1,76 @@
+.card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.job-card-container {
+    width: 100%;
+    max-width: 350px; /* Set a max width for larger screens */
+    margin: 16px auto; /* Center the card with auto margins */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a polished look */
+}
+
+.card-company {
+    align-self: first baseline;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.card-location {
+    align-self: first baseline;
+    font-size: medium;
+    font-weight: normal;
+
+}
+
+@media screen and (min-width: 768px) {
+.job-card-container {
+    width: 80%; /* Adjust width on tablet view */
+}
+}
+
+@media screen and (min-width: 1024px) {
+.job-card-container {
+    width: 50%; /* Adjust width on desktop view */
+}
+}
+
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--ion-color-medium);
+    border-top: 1px solid var(--ion-color-light);
+  }
+  
+  .posted-date {
+    color: var(--ion-color-dark);
+  }
+  
+  .separator {
+    padding: 0 5px;
+  }
+  
+  .applicant-count {
+    font-weight: 500;
+  }
+  
+  /* .job-pay {
+    font-size: 1.2rem;
+    color: var(--ion-color-primary);
+    font-weight: bold;
+  } */
+  
+  /* ion-card {
+    margin: 16px;
+    padding: 8px;
+  }
+   */
+  /* ion-chip {
+    --background: var(--ion-color-light);
+    --color: var(--ion-color-dark);
+    margin-top: 8px;
+  } */

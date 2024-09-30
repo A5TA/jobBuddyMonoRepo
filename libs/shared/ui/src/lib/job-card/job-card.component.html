@@ -1,0 +1,39 @@
+<ion-card class="job-card-container">
+    <ion-card-header>
+      <ion-card-title>
+        <div class="card-title-container">
+          <span>{{ jobRole }}</span>
+          <span class="job-pay">{{ jobPay | currency }}</span>
+        </div>
+      </ion-card-title>
+      <ion-card-subtitle class="card-company">{{ jobCompany }}</ion-card-subtitle>
+      <ion-card-subtitle class="card-location">{{ jobLocation }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+                <!-- Iterate through jobType list and display max 3 chips -->
+                <ng-container *ngFor="let type of jobType.slice(0, jobTypesShown); let i = index">
+                  <ion-chip>{{ type }}</ion-chip>
+                </ng-container>
+      
+                <!-- If there are more than 3 job types, show a "+X more" chip -->
+                <ion-chip *ngIf="jobType.length > jobTypesShown" (click)="showMoreJobInfo()">
+                  +{{ jobType.length - jobTypesShown }} more
+                </ion-chip>
+              </ion-col>
+        </ion-row>
+      </ion-grid>
+
+       <!-- Footer Section -->
+    <div class="card-footer">
+        <span class="posted-date">{{ daysAgo }} days ago</span>
+        <span class="separator">|</span>
+        <span class="applicant-count">{{ applicants }} applicants</span>
+    </div>
+    </ion-card-content>
+
+
+  </ion-card>
